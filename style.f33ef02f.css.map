@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.less"],"names":[],"mappings":"AAAA,KACE,QAAA,CACA,wBAAA,CACA","file":"style.f33ef02f.css","sourceRoot":"../example","sourcesContent":["body {\n  margin: 0;\n  background-color: rgb(82, 86, 89);\n  font-family: Segoe UI, Tahoma, sans-serif;\n}\n"]}
