@@ -1,6 +1,6 @@
 {
   "name": "vue-pdfjs2",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.0-alpha.1",
   "description": "Display PDFs in your Vue app as easily as if they were images.",
   "license": "MIT",
   "main": "umd/entry.js",
