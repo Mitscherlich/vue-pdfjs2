@@ -188,6 +188,4 @@ export function loadFromFile(file) {
   });
 }
 
-export * from './dispatchEvents';
-
-export * from './createContext';
+export { dispatchEvents } from './dispatchEvents';

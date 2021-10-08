@@ -134,9 +134,9 @@ class TextLayerInternal extends Vue {
 }
 
 const TextLayer = ({ props }) => (
-  <PageContext.Consumer
-    customRender={(context) => <TextLayerInternal {...{ props: { ...context, ...props } }} />}
-  />
+  <PageContext.Consumer>
+    {(context) => <TextLayerInternal {...{ props: { ...context, ...props } }} />}
+  </PageContext.Consumer>
 );
 
 export default TextLayer;

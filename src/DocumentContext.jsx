@@ -1,3 +1,3 @@
-import { createContext } from './shared/utils';
+import { makeContext } from './shared/make-context';
 
-export default createContext(null);
+export default makeContext(null);

@@ -111,9 +111,9 @@ class PageSVGInternal extends Vue {
 }
 
 const PageSVG = ({ props }) => (
-  <PageContext.Consumer
-    customRender={(context) => <PageSVGInternal {...{ props: { ...context, ...props } }} />}
-  />
+  <PageContext.Consumer>
+    {(context) => <PageSVGInternal {...{ props: { ...context, ...props } }} />}
+  </PageContext.Consumer>
 );
 
 export default PageSVG;

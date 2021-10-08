@@ -140,17 +140,17 @@ class AnnotationLayerInternal extends Vue {
 }
 
 const AnnotationLayer = ({ props }) => (
-  <DocumentContext.Consumer
-    customRender={(documentContext) => (
-      <PageContext.Consumer
-        customRender={(pageContext) => (
+  <DocumentContext.Consumer>
+    {(documentContext) => (
+      <PageContext.Consumer>
+        {(pageContext) => (
           <AnnotationLayerInternal
             {...{ props: { ...documentContext, ...pageContext, ...props } }}
           />
         )}
-      />
+      </PageContext.Consumer>
     )}
-  />
+  </DocumentContext.Consumer>
 );
 
 export default AnnotationLayer;

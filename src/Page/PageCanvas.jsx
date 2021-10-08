@@ -149,9 +149,9 @@ class PageCanvasInternal extends Vue {
 }
 
 const PageCanvas = ({ props }) => (
-  <PageContext.Consumer
-    customRender={(context) => <PageCanvasInternal {...{ props: { ...context, ...props } }} />}
-  />
+  <PageContext.Consumer>
+    {(context) => <PageCanvasInternal {...{ props: { ...context, ...props } }} />}
+  </PageContext.Consumer>
 );
 
 export default PageCanvas;

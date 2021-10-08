@@ -234,7 +234,7 @@ Either provide onItemClick to <Document> and handle navigating by yourself or en
 
     errorOnDev(error);
 
-    dispatchEvents(this, 'error load:error', error);
+    dispatchEvents(this, 'error load:error loadError', error);
   }
 
   /**
