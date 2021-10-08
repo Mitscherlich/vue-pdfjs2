@@ -3,6 +3,9 @@
 exports.__esModule = true;
 exports.provide = provide;
 exports.inject = inject;
+
+var _utils = require("../utils");
+
 var provides = {};
 
 function provide(key, value) {
@@ -18,7 +21,5 @@ function inject(key, defaultValue) {
     return defaultValue;
   }
 
-  if (process.env.NODE_ENV !== 'production') {
-    console.warn("injection \"" + String(key) + "\" not found.");
-  }
+  (0, _utils.warnOnDev)("injection \"" + String(key) + "\" not found.");
 }

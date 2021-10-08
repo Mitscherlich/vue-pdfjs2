@@ -1,3 +1,4 @@
+import { warnOnDev } from '../utils';
 var provides = {};
 export function provide(key, value) {
   provides[key] = value;
@@ -11,7 +12,5 @@ export function inject(key, defaultValue) {
     return defaultValue;
   }
 
-  if (process.env.NODE_ENV !== 'production') {
-    console.warn("injection \"" + String(key) + "\" not found.");
-  }
+  warnOnDev("injection \"" + String(key) + "\" not found.");
 }
