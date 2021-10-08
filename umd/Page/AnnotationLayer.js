@@ -17,7 +17,7 @@ var _inheritsLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/inh
 
 var _vue = _interopRequireDefault(require("vue"));
 
-var _vueTypes = _interopRequireDefault(require("../shared/vue-types"));
+var _vueTypes = _interopRequireDefault(require("vue-types"));
 
 var _vueClassComponent = _interopRequireDefault(require("vue-class-component"));
 
@@ -217,21 +217,13 @@ var AnnotationLayer = {
   functional: true,
   render: function render(h, _ref) {
     var props = _ref.props;
-    return h(_DocumentContext["default"].Consumer, {
-      "attrs": {
-        "customRender": function customRender(documentContext) {
-          return h(_PageContext["default"].Consumer, {
-            "attrs": {
-              "customRender": function customRender(pageContext) {
-                return h(AnnotationLayerInternal, {
-                  "props": (0, _extends2["default"])({}, (0, _extends2["default"])({}, documentContext, pageContext, props))
-                });
-              }
-            }
-          });
-        }
-      }
-    });
+    return h(_DocumentContext["default"].Consumer, [function (documentContext) {
+      return h(_PageContext["default"].Consumer, [function (pageContext) {
+        return h(AnnotationLayerInternal, {
+          "props": (0, _extends2["default"])({}, (0, _extends2["default"])({}, documentContext, pageContext, props))
+        });
+      }]);
+    }]);
   }
 };
 var _default = AnnotationLayer;

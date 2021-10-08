@@ -1,4 +1,4 @@
-import PropTypes from './shared/vue-types';
+import PropTypes from 'vue-types';
 export var MessageProps = {
   type: PropTypes.oneOf(['error', 'loading', 'no-data']).isRequired
 };

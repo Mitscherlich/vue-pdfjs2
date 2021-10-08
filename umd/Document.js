@@ -21,7 +21,7 @@ var _vue = _interopRequireDefault(require("vue"));
 
 var _vueClassComponent = _interopRequireDefault(require("vue-class-component"));
 
-var _vueTypes = _interopRequireDefault(require("./shared/vue-types"));
+var _vueTypes = _interopRequireDefault(require("vue-types"));
 
 var _makeCancellablePromise = _interopRequireDefault(require("make-cancellable-promise"));
 
@@ -307,7 +307,7 @@ var Document = (_dec = (0, _vueClassComponent["default"])({
   _proto.onLoadError = function onLoadError(error) {
     this.pdf = false;
     (0, _utils.errorOnDev)(error);
-    (0, _utils.dispatchEvents)(this, 'error load:error', error);
+    (0, _utils.dispatchEvents)(this, 'error load:error loadError', error);
   }
   /**
    * Finds a document source based on props.

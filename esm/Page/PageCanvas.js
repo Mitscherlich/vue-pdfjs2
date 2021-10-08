@@ -5,7 +5,7 @@ import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
 var _dec, _class;
 
 import Vue from 'vue';
-import PropTypes from '../shared/vue-types';
+import PropTypes from 'vue-types';
 import Component from 'vue-class-component';
 import PageContext from '../PageContext';
 import { errorOnDev, getPixelRatio, isCancelException, makePageCallback, dispatchEvents } from '../shared/utils';
@@ -173,15 +173,11 @@ var PageCanvas = {
   functional: true,
   render: function render(h, _ref) {
     var props = _ref.props;
-    return h(PageContext.Consumer, {
-      "attrs": {
-        "customRender": function customRender(context) {
-          return h(PageCanvasInternal, {
-            "props": _extends({}, _extends({}, context, props))
-          });
-        }
-      }
-    });
+    return h(PageContext.Consumer, [function (context) {
+      return h(PageCanvasInternal, {
+        "props": _extends({}, _extends({}, context, props))
+      });
+    }]);
   }
 };
 export default PageCanvas;

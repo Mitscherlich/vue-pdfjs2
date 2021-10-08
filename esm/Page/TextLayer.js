@@ -7,7 +7,7 @@ var _dec, _class;
 
 import _regeneratorRuntime from "@babel/runtime/regenerator";
 import Vue from 'vue';
-import PropTypes from '../shared/vue-types';
+import PropTypes from 'vue-types';
 import Component from 'vue-class-component';
 import makeCancellable from 'make-cancellable-promise';
 import PageContext from '../PageContext';
@@ -190,15 +190,11 @@ var TextLayer = {
   functional: true,
   render: function render(h, _ref) {
     var props = _ref.props;
-    return h(PageContext.Consumer, {
-      "attrs": {
-        "customRender": function customRender(context) {
-          return h(TextLayerInternal, {
-            "props": _extends({}, _extends({}, context, props))
-          });
-        }
-      }
-    });
+    return h(PageContext.Consumer, [function (context) {
+      return h(TextLayerInternal, {
+        "props": _extends({}, _extends({}, context, props))
+      });
+    }]);
   }
 };
 export default TextLayer;

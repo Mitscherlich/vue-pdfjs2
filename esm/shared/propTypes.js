@@ -1,4 +1,4 @@
-import PropTypes from './vue-types';
+import PropTypes from 'vue-types';
 import { isDefined } from './utils';
 import LinkService from '../LinkService';
 var fileTypes = [PropTypes.string, PropTypes.instanceOf(ArrayBuffer), PropTypes.shape({

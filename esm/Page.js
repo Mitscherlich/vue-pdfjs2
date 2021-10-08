@@ -8,7 +8,7 @@ var _dec, _class;
 import _regeneratorRuntime from "@babel/runtime/regenerator";
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import PropTypes from './shared/vue-types';
+import PropTypes from 'vue-types';
 import makeCancellable from 'make-cancellable-promise';
 import DocumentContext from './DocumentContext';
 import PageContext from './PageContext';
@@ -407,15 +407,11 @@ var Page = {
   functional: true,
   render: function render(h, _ref) {
     var props = _ref.props;
-    return h(DocumentContext.Consumer, {
-      "attrs": {
-        "customRender": function customRender(context) {
-          return h(PageInternal, {
-            "props": _extends({}, _extends({}, context, props))
-          });
-        }
-      }
-    });
+    return h(DocumentContext.Consumer, [function (context) {
+      return h(PageInternal, {
+        "props": _extends({}, _extends({}, context, props))
+      });
+    }]);
   }
 };
 export default Page;

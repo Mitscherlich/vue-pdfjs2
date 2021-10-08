@@ -1,27 +1,6 @@
 "use strict";
 
 exports.__esModule = true;
-var _exportNames = {
-  isBrowser: true,
-  isLocalFileSystem: true,
-  isProduction: true,
-  isDefined: true,
-  isProvided: true,
-  isString: true,
-  isArrayBuffer: true,
-  isBlob: true,
-  isFile: true,
-  isDataURI: true,
-  dataURItoByteString: true,
-  getPixelRatio: true,
-  warnOnDev: true,
-  errorOnDev: true,
-  displayCORSWarning: true,
-  cancelRunningTask: true,
-  makePageCallback: true,
-  isCancelException: true,
-  loadFromFile: true
-};
 exports.isDefined = isDefined;
 exports.isProvided = isProvided;
 exports.isString = isString;
@@ -38,25 +17,11 @@ exports.cancelRunningTask = cancelRunningTask;
 exports.makePageCallback = makePageCallback;
 exports.isCancelException = isCancelException;
 exports.loadFromFile = loadFromFile;
-exports.isProduction = exports.isLocalFileSystem = exports.isBrowser = void 0;
+exports.dispatchEvents = exports.isProduction = exports.isLocalFileSystem = exports.isBrowser = void 0;
 
 var _dispatchEvents = require("./dispatchEvents");
 
-Object.keys(_dispatchEvents).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
-  if (key in exports && exports[key] === _dispatchEvents[key]) return;
-  exports[key] = _dispatchEvents[key];
-});
-
-var _createContext = require("./createContext");
-
-Object.keys(_createContext).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
-  if (key in exports && exports[key] === _createContext[key]) return;
-  exports[key] = _createContext[key];
-});
+exports.dispatchEvents = _dispatchEvents.dispatchEvents;
 
 /**
  * Checks if we're running in a browser environment.

@@ -10,7 +10,7 @@ var _dec, _class;
 import _regeneratorRuntime from "@babel/runtime/regenerator";
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import PropTypes from './shared/vue-types';
+import PropTypes from 'vue-types';
 import makeCancellable from 'make-cancellable-promise';
 import * as pdfjs from 'pdfjs-dist/legacy/build/pdf';
 import DocumentContext from './DocumentContext';
@@ -278,7 +278,7 @@ var Document = (_dec = Component({
   _proto.onLoadError = function onLoadError(error) {
     this.pdf = false;
     errorOnDev(error);
-    dispatchEvents(this, 'error load:error', error);
+    dispatchEvents(this, 'error load:error loadError', error);
   }
   /**
    * Finds a document source based on props.

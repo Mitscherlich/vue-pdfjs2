@@ -201,5 +201,4 @@ export function loadFromFile(file) {
     return null;
   });
 }
-export * from './dispatchEvents';
-export * from './createContext';
+export { dispatchEvents } from './dispatchEvents';

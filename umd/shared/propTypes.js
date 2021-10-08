@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.isRotate = exports.isRenderMode = exports.isPageNumber = exports.isPageIndex = exports.isLinkTarget = exports.isLinkService = exports.isFile = void 0;
 
-var _vueTypes = _interopRequireDefault(require("./vue-types"));
+var _vueTypes = _interopRequireDefault(require("vue-types"));
 
 var _utils = require("./utils");
 

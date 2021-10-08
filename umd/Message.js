@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports["default"] = exports.MessageProps = void 0;
 
-var _vueTypes = _interopRequireDefault(require("./shared/vue-types"));
+var _vueTypes = _interopRequireDefault(require("vue-types"));
 
 var MessageProps = {
   type: _vueTypes["default"].oneOf(['error', 'loading', 'no-data']).isRequired

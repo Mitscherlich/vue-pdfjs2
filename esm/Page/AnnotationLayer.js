@@ -7,7 +7,7 @@ var _dec, _class;
 
 import _regeneratorRuntime from "@babel/runtime/regenerator";
 import Vue from 'vue';
-import PropTypes from '../shared/vue-types';
+import PropTypes from 'vue-types';
 import Component from 'vue-class-component';
 import * as pdfjs from 'pdfjs-dist/legacy/build/pdf';
 import makeCancellable from 'make-cancellable-promise';
@@ -193,21 +193,13 @@ var AnnotationLayer = {
   functional: true,
   render: function render(h, _ref) {
     var props = _ref.props;
-    return h(DocumentContext.Consumer, {
-      "attrs": {
-        "customRender": function customRender(documentContext) {
-          return h(PageContext.Consumer, {
-            "attrs": {
-              "customRender": function customRender(pageContext) {
-                return h(AnnotationLayerInternal, {
-                  "props": _extends({}, _extends({}, documentContext, pageContext, props))
-                });
-              }
-            }
-          });
-        }
-      }
-    });
+    return h(DocumentContext.Consumer, [function (documentContext) {
+      return h(PageContext.Consumer, [function (pageContext) {
+        return h(AnnotationLayerInternal, {
+          "props": _extends({}, _extends({}, documentContext, pageContext, props))
+        });
+      }]);
+    }]);
   }
 };
 export default AnnotationLayer;

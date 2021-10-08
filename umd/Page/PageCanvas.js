@@ -13,7 +13,7 @@ var _inheritsLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/inh
 
 var _vue = _interopRequireDefault(require("vue"));
 
-var _vueTypes = _interopRequireDefault(require("../shared/vue-types"));
+var _vueTypes = _interopRequireDefault(require("vue-types"));
 
 var _vueClassComponent = _interopRequireDefault(require("vue-class-component"));
 
@@ -188,15 +188,11 @@ var PageCanvas = {
   functional: true,
   render: function render(h, _ref) {
     var props = _ref.props;
-    return h(_PageContext["default"].Consumer, {
-      "attrs": {
-        "customRender": function customRender(context) {
-          return h(PageCanvasInternal, {
-            "props": (0, _extends2["default"])({}, (0, _extends2["default"])({}, context, props))
-          });
-        }
-      }
-    });
+    return h(_PageContext["default"].Consumer, [function (context) {
+      return h(PageCanvasInternal, {
+        "props": (0, _extends2["default"])({}, (0, _extends2["default"])({}, context, props))
+      });
+    }]);
   }
 };
 var _default = PageCanvas;

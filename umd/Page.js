@@ -19,7 +19,7 @@ var _vue = _interopRequireDefault(require("vue"));
 
 var _vueClassComponent = _interopRequireDefault(require("vue-class-component"));
 
-var _vueTypes = _interopRequireDefault(require("./shared/vue-types"));
+var _vueTypes = _interopRequireDefault(require("vue-types"));
 
 var _makeCancellablePromise = _interopRequireDefault(require("make-cancellable-promise"));
 
@@ -430,15 +430,11 @@ var Page = {
   functional: true,
   render: function render(h, _ref) {
     var props = _ref.props;
-    return h(_DocumentContext["default"].Consumer, {
-      "attrs": {
-        "customRender": function customRender(context) {
-          return h(PageInternal, {
-            "props": (0, _extends2["default"])({}, (0, _extends2["default"])({}, context, props))
-          });
-        }
-      }
-    });
+    return h(_DocumentContext["default"].Consumer, [function (context) {
+      return h(PageInternal, {
+        "props": (0, _extends2["default"])({}, (0, _extends2["default"])({}, context, props))
+      });
+    }]);
   }
 };
 var _default = Page;
