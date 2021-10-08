@@ -23,12 +23,14 @@
     "url": "git+https://github.com/Mitscherlich/vue-pdfjs2.git"
   },
   "scripts": {
+    "postinstall": "node ./scripts/postinstall.js",
     "example:dev": "parcel example/index.html",
     "example:build": "parcel build example/index.html",
+    "watch": "yarn build-js-esm --watch",
     "build": "yarn build-js-all",
     "build-js-all": "yarn build-js-esm && yarn build-js-umd",
-    "build-js-esm": "BABEL_ENV=esm babel src -d dist/esm --copy-files",
-    "build-js-umd": "BABEL_ENV=umd babel src -d dist/umd --copy-files",
+    "build-js-esm": "cross-env BABEL_ENV=esm babel src -d dist/esm --copy-files",
+    "build-js-umd": "cross-env BABEL_ENV=umd babel src -d dist/umd --copy-files",
     "clean": "rimraf dist",
     "lint:fix": "prettier src/**/*.{js,jsx} --write",
     "prepublishOnly": "yarn clean && yarn build"
@@ -50,8 +52,10 @@
     "@babel/preset-env": "^7.15.6",
     "@vue/babel-preset-jsx": "^1.2.4",
     "@vue/component-compiler-utils": "^3.2.2",
+    "cross-env": "^7.0.3",
     "file-loader": "^6.2.0",
     "less": "^4.1.1",
+    "local-pkg": "^0.3.0",
     "parcel-bundler": "^1.12.5",
     "prettier": "^2.4.0",
     "vue": "^2.6.14",
