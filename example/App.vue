@@ -1,5 +1,5 @@
 <template>
-  <div class="Example">
+  <div id="app" class="Example">
     <header>
       <h1>vue-pdf2 sample page</h1>
     </header>
