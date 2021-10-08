@@ -6092,11 +6092,6 @@ vue-class-component@^7.2.6:
   resolved "https://registry.nlark.com/vue-class-component/download/vue-class-component-7.2.6.tgz#8471e037b8e4762f5a464686e19e5afc708502e4"
   integrity sha1-hHHgN7jkdi9aRkaG4Z5a/HCFAuQ=
 
-vue-create-context@^1.1.0:
-  version "1.1.0"
-  resolved "https://npm.kbjcloud.net/vue-create-context/-/vue-create-context-1.1.0.tgz#8f8f3a921453491bdb5e65aa6ff748be58c27a01"
-  integrity sha1-j486khRTSRvbXmWqb/dIvljCegE=
-
 vue-hot-reload-api@^2.3.4:
   version "2.3.4"
   resolved "https://registry.nlark.com/vue-hot-reload-api/download/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
