@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import PropTypes from '../shared/vue-types';
+import PropTypes from 'vue-types';
 import Component from 'vue-class-component';
 
 import PageContext from '../PageContext';

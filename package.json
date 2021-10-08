@@ -41,7 +41,7 @@
     "make-cancellable-promise": "^1.0.0",
     "pdfjs-dist": "^2.9.359",
     "vue-class-component": "^7.2.6",
-    "vue-pdf2": "^3.3.1"
+    "vue-types": "^4.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.4",

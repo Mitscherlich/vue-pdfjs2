@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import PropTypes from './shared/vue-types';
+import PropTypes from 'vue-types';
 import makeCancellable from 'make-cancellable-promise';
 import * as pdfjs from 'pdfjs-dist/legacy/build/pdf';
 

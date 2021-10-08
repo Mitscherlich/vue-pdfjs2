@@ -1,4 +1,4 @@
-import PropTypes from './vue-types';
+import PropTypes from 'vue-types';
 
 import { isDefined } from './utils';
 

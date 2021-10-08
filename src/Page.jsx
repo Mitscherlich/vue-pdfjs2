@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import PropTypes from './shared/vue-types';
+import PropTypes from 'vue-types';
 import makeCancellable from 'make-cancellable-promise';
 
 import DocumentContext from './DocumentContext';
@@ -321,9 +321,9 @@ class PageInternal extends Vue {
 }
 
 const Page = ({ props }) => (
-  <DocumentContext.Consumer
-    customRender={(context) => <PageInternal {...{ props: { ...context, ...props } }} />}
-  />
+  <DocumentContext.Consumer>
+    {(context) => <PageInternal {...{ props: { ...context, ...props } }} />}
+  </DocumentContext.Consumer>
 );
 
 export default Page;
