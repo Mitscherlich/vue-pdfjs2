@@ -9,6 +9,8 @@ var pdfjs = _interopRequireWildcard(require("pdfjs-dist/legacy/build/pdf"));
 
 exports.pdfjs = pdfjs;
 
+var _pdf2 = _interopRequireDefault(require("file-loader!pdfjs-dist/legacy/build/pdf.worker"));
+
 var _Document = _interopRequireDefault(require("./Document"));
 
 exports.Document = _Document["default"];
@@ -31,6 +33,4 @@ if (_utils.isLocalFileSystem) {
   (0, _utils.warnOnDev)("You are running VuePDF from your local file system.\nPDF.js Worker may fail to load due to browser's security policies.\nIf you're on Google Chrome, you can use --allow-file-access-from-files flag for debugging purposes.");
 }
 
-if (typeof window !== 'undefined' && 'Worker' in window) {
-  pdfjs.GlobalWorkerOptions.workerPort = new Worker('./pdf.worker.entry.js');
-}
+pdfjs.GlobalWorkerOptions.workerSrc = _pdf2["default"];
