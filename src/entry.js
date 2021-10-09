@@ -1,7 +1,7 @@
 import * as pdfjs from 'pdfjs-dist/legacy/build/pdf';
 
 import Document from './Document';
-// import Outline from './Outline';
+import Outline from './Outline';
 import Page from './Page';
 
 import { isLocalFileSystem, warnOnDev } from './shared/utils';
@@ -16,4 +16,4 @@ If you're on Google Chrome, you can use --allow-file-access-from-files flag for 
 
 pdfjs.GlobalWorkerOptions.workerSrc = 'pdf.worker.js';
 
-export { pdfjs, Document, /* Outline, */ Page };
+export { pdfjs, Document, Outline, Page };
