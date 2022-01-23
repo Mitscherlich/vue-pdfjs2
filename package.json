@@ -54,7 +54,7 @@
     "cross-env": "7.0.3",
     "file-loader": "6.2.0",
     "less": "4.1.2",
-    "local-pkg": "0.3.0",
+    "local-pkg": "0.4.1",
     "parcel-bundler": "1.12.5",
     "prettier": "2.4.0",
     "vue": "2.6.14",
