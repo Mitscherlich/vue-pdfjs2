@@ -1,23 +1,25 @@
 "use strict";
 
 exports.__esModule = true;
-exports.isDefined = isDefined;
-exports.isProvided = isProvided;
-exports.isString = isString;
+exports.cancelRunningTask = cancelRunningTask;
+exports.dataURItoByteString = dataURItoByteString;
+exports.dispatchEvents = void 0;
+exports.displayCORSWarning = displayCORSWarning;
+exports.errorOnDev = errorOnDev;
+exports.getPixelRatio = getPixelRatio;
 exports.isArrayBuffer = isArrayBuffer;
 exports.isBlob = isBlob;
-exports.isFile = isFile;
-exports.isDataURI = isDataURI;
-exports.dataURItoByteString = dataURItoByteString;
-exports.getPixelRatio = getPixelRatio;
-exports.warnOnDev = warnOnDev;
-exports.errorOnDev = errorOnDev;
-exports.displayCORSWarning = displayCORSWarning;
-exports.cancelRunningTask = cancelRunningTask;
-exports.makePageCallback = makePageCallback;
+exports.isBrowser = void 0;
 exports.isCancelException = isCancelException;
+exports.isDataURI = isDataURI;
+exports.isDefined = isDefined;
+exports.isFile = isFile;
+exports.isProduction = exports.isLocalFileSystem = void 0;
+exports.isProvided = isProvided;
+exports.isString = isString;
 exports.loadFromFile = loadFromFile;
-exports.dispatchEvents = exports.isProduction = exports.isLocalFileSystem = exports.isBrowser = void 0;
+exports.makePageCallback = makePageCallback;
+exports.warnOnDev = warnOnDev;
 
 var _dispatchEvents = require("./dispatchEvents");
 

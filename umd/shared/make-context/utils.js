@@ -1,8 +1,8 @@
 "use strict";
 
 exports.__esModule = true;
-exports.provide = provide;
 exports.inject = inject;
+exports.provide = provide;
 
 var _utils = require("../utils");
 
