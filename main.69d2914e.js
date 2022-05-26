@@ -101,4 +101,4 @@ module.exports="/vue-pdfjs2/sample.623cbe59.pdf";
 },{"@babel/runtime/helpers/defineProperty":"IxO8","vue-pdfjs2/dist/esm/entry.parcel":"pUTO","vue-pdfjs2/dist/esm/Page/AnnotationLayer.css":"rDCW","./sample.pdf":"BpdB"}],"epB2":[function(require,module,exports) {
 "use strict";var e=r(require("vue")),u=r(require("./App.vue"));function r(e){return e&&e.__esModule?e:{default:e}}e.default.config.productionTip=!1,new e.default({render:function(e){return e(u.default)}}).$mount("#app");
 },{"vue":"QPfz","./App.vue":"Js2s"}]},{},["epB2"], null)
-//# sourceMappingURL=/vue-pdfjs2/main.cc1070b0.js.map
+//# sourceMappingURL=/vue-pdfjs2/main.69d2914e.js.map
