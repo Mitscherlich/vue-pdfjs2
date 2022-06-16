@@ -56,7 +56,7 @@
     "less": "4.1.3",
     "local-pkg": "0.4.1",
     "parcel-bundler": "1.12.5",
-    "prettier": "2.7.0",
+    "prettier": "2.7.1",
     "vue": "2.6.14",
     "vue-hot-reload-api": "2.3.4",
     "vue-template-compiler": "2.6.14",
