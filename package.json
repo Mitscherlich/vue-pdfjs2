@@ -57,9 +57,9 @@
     "local-pkg": "0.4.2",
     "parcel-bundler": "1.12.5",
     "prettier": "2.7.1",
-    "vue": "2.7.4",
+    "vue": "2.7.5",
     "vue-hot-reload-api": "2.3.4",
-    "vue-template-compiler": "2.7.4",
+    "vue-template-compiler": "2.7.5",
     "webpack": "5.73.0",
     "worker-loader": "3.0.8"
   },
