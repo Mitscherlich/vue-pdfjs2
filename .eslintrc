@@ -1,0 +1,6 @@
+{
+  "extends": ["@m9ch/all"],
+  "rules": {
+    "react/prop-types": "off"
+  }
+}

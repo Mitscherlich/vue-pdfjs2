@@ -12,120 +12,140 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import invariant from 'tiny-invariant'
+
+const DEFAULT_LINK_REL = 'noopener noreferrer nofollow'
 
 export default class LinkService {
   constructor() {
-    this.externalLinkTarget = null;
-    this.externalLinkRel = null;
-    this.externalLinkEnabled = true;
+    this.externalLinkTarget = null
+    this.externalLinkRel = null
   }
 
   setDocument(pdfDocument) {
-    this.pdfDocument = pdfDocument;
+    this.pdfDocument = pdfDocument
   }
 
   setViewer(pdfViewer) {
-    this.pdfViewer = pdfViewer;
+    this.pdfViewer = pdfViewer
   }
 
-  setHistory() {
-    // TODO: implement or delete this
+  setExternalLinkRel(externalLinkRel) {
+    this.externalLinkRel = externalLinkRel
   }
+
+  setExternalLinkTarget(externalLinkTarget) {
+    this.externalLinkTarget = externalLinkTarget
+  }
+
+  setHistory() {}
 
   get pagesCount() {
-    return this.pdfDocument ? this.pdfDocument.numPages : 0;
+    return this.pdfDocument ? this.pdfDocument.numPages : 0
   }
 
   get page() {
-    return this.pdfViewer.currentPageNumber;
+    return this.pdfViewer.currentPageNumber
   }
 
   set page(value) {
-    this.pdfViewer.currentPageNumber = value;
+    this.pdfViewer.currentPageNumber = value
   }
 
   get rotation() {
-    return 0;
+    return 0
   }
 
-  set rotation(value) {
-    // TODO: implement or delete this
-  }
+  set rotation(value) {}
 
   goToDestination(dest) {
     new Promise((resolve) => {
-      if (typeof dest === 'string') {
-        this.pdfDocument.getDestination(dest).then(resolve);
-      } else {
-        dest.then(resolve);
-      }
-    }).then((explicitDest) => {
-      if (!Array.isArray(explicitDest)) {
-        throw new Error(`"${explicitDest}" is not a valid destination array.`);
-      }
+      if (typeof dest === 'string')
+        this.pdfDocument.getDestination(dest).then(resolve)
 
-      const destRef = explicitDest[0];
+      else if (Array.isArray(dest))
+        resolve(dest)
+
+      else
+        dest.then(resolve)
+    }).then((explicitDest) => {
+      invariant(Array.isArray(explicitDest), `"${explicitDest}" is not a valid destination array.`)
+
+      const destRef = explicitDest[0]
 
       new Promise((resolve) => {
         if (destRef instanceof Object) {
           this.pdfDocument
             .getPageIndex(destRef)
             .then((pageIndex) => {
-              resolve(pageIndex + 1);
+              resolve(pageIndex)
             })
             .catch(() => {
-              throw new Error(`"${destRef}" is not a valid page reference.`);
-            });
-        } else if (typeof destRef === 'number') {
-          resolve(destRef + 1);
-        } else {
-          throw new Error(`"${destRef}" is not a valid destination reference.`);
+              invariant(false, `"${destRef}" is not a valid page reference.`)
+            })
         }
-      }).then((pageNumber) => {
-        if (!pageNumber || pageNumber < 1 || pageNumber > this.pagesCount) {
-          throw new Error(`"${pageNumber}" is not a valid page number.`);
+        else if (typeof destRef === 'number') {
+          resolve(destRef)
         }
+        else {
+          invariant(false, `"${destRef}" is not a valid destination reference.`)
+        }
+      }).then((pageIndex) => {
+        const pageNumber = pageIndex + 1
+
+        invariant(
+          pageNumber >= 1 && pageNumber <= this.pagesCount,
+          `"${pageNumber}" is not a valid page number.`,
+        )
 
         this.pdfViewer.scrollPageIntoView({
+          dest,
+          pageIndex,
           pageNumber,
-        });
-      });
-    });
+        })
+      })
+    })
   }
 
   navigateTo(dest) {
-    this.goToDestination(dest);
+    this.goToDestination(dest)
   }
 
   goToPage() {
-    // TODO: implement or delete this
+    // TODO
+  }
+
+  addLinkAttributes(link, url, newWindow) {
+    link.href = url
+    link.rel = this.externalLinkRel || DEFAULT_LINK_REL
+    link.target = newWindow ? '_blank' : this.externalLinkTarget || ''
   }
 
   getDestinationHash() {
-    return '#';
+    return '#'
   }
 
   getAnchorUrl() {
-    return '#';
+    return '#'
   }
 
   setHash() {
-    // TODO: implement or delete this
+    // TODO
   }
 
   executeNamedAction() {
-    // TODO: implement or delete this
+    // TODO
   }
 
   cachePageRef() {
-    // TODO: implement or delete this
+    // TODO
   }
 
   isPageVisible() {
-    return true;
+    return true
   }
 
   isPageCached() {
-    return true;
+    return true
   }
 }
