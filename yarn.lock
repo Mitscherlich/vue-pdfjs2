@@ -7787,10 +7787,10 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha1-HuO8mhbsv1EYvjNLsV+cRvgvWCU=
 
-vue-types@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.nlark.com/vue-types/download/vue-types-4.1.0.tgz#8dcbbaccf9d5c3815449ac7cb8ae5864454cfff0"
-  integrity sha1-jcu6zPnVw4FUSax8uK5YZEVM//A=
+vue-types@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/vue-types/-/vue-types-5.0.0.tgz#2c75082f72aecdb08e16c1327803960dfb12cd26"
+  integrity sha512-giq56UtZRugrJXAO71croWBrYlhBrtvRZPqBqcng3yq4D4NwmwZdTeJu/x76aoUAAghJ24CvALoVt1sc23IaFw==
   dependencies:
     is-plain-object "5.0.0"
 
