@@ -5632,9 +5632,9 @@ magic-string@^0.25.7:
     sourcemap-codec "^1.4.8"
 
 make-cancellable-promise@^1.1.0:
-  version "1.1.0"
-  resolved "https://npm.kbjcloud.net/make-cancellable-promise/-/make-cancellable-promise-1.1.0.tgz#b4e9fcb31db3a27417e44f80cffa598ec9ac9f4e"
-  integrity sha1-tOn8sx2zonQX5E+Az/pZjsmsn04=
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/make-cancellable-promise/-/make-cancellable-promise-1.2.1.tgz#b644fbc1ead91ef4968ac63da762476a462732ac"
+  integrity sha512-nigEn7brgUhjUb2lEobWUW4ZiJdIZ/Wct0UsmDsqaZhgLMvY1OC6FGLa/5SU2RvnyuilkjM7g5JGxt6CJZQGNw==
 
 make-dir@^2.1.0:
   version "2.1.0"
