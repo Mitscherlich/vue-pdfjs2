@@ -6006,9 +6006,9 @@ node-addon-api@^1.7.1:
   integrity sha1-PfMLlXILU8JOWZSLSVMrZiRE9U0=
 
 node-fetch@^2.6.7:
-  version "2.6.9"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.9.tgz#7c7f744b5cc6eb5fd404e0c7a9fec630a55657e6"
-  integrity sha512-DJm/CJkZkRjKKj4Zi4BsKVZh3ValV5IR5s7LVZnW+6YMh0W1BfNA8XSs6DLMGYlId5F3KnA70uu2qepcR08Qqg==
+  version "2.6.11"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.11.tgz#cde7fc71deef3131ef80a738919f999e6edfff25"
+  integrity sha512-4I6pdBY1EthSqDmJkiNk3JIT8cswwR9nfeW/cPdUagJYEQG7R95WRH74wpz7ma8Gh/9dI9FP+OU+0E4FvtA55w==
   dependencies:
     whatwg-url "^5.0.0"
 
@@ -6406,14 +6406,12 @@ pbkdf2@^3.0.3:
     sha.js "^2.4.8"
 
 pdfjs-dist@^3.0.0:
-  version "3.6.172"
-  resolved "https://registry.yarnpkg.com/pdfjs-dist/-/pdfjs-dist-3.6.172.tgz#f9efdfc5e850e1fecfc70b7f6f45c5dc990d8096"
-  integrity sha512-bfOhCg+S9DXh/ImWhWYTOiq3aVMFSCvzGiBzsIJtdMC71kVWDBw7UXr32xh0y56qc5wMVylIeqV3hBaRsu+e+w==
-  dependencies:
-    path2d-polyfill "^2.0.1"
-    web-streams-polyfill "^3.2.1"
+  version "3.7.107"
+  resolved "https://registry.yarnpkg.com/pdfjs-dist/-/pdfjs-dist-3.7.107.tgz#011ca8a6753966f1670458e87d15f32f00ae1357"
+  integrity sha512-D0pZgz4u8VNjCCXfNCjzeFcenxKFGh2RnGlLIvDHgpT+ZvOlsBlHugpOfmcLQyKk7csHBhPalf+mCM6thiclSQ==
   optionalDependencies:
     canvas "^2.11.2"
+    path2d-polyfill "^2.0.1"
 
 performance-now@^2.1.0:
   version "2.1.0"
@@ -7339,9 +7337,9 @@ semver@^6.0.0, semver@^6.1.1, semver@^6.1.2, semver@^6.3.0:
   integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
 
 semver@^7.3.5:
-  version "7.5.0"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.0.tgz#ed8c5dc8efb6c629c88b23d41dc9bf40c1d96cd0"
-  integrity sha512-+XC0AD/R7Q2mPSRuy2Id0+CGTZ98+8f+KvwirxOKIEyid+XSx6HbC63p+O4IndTHuX5Z+JxQ0TghCkO5Cg/2HA==
+  version "7.5.1"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.1.tgz#c90c4d631cf74720e46b21c1d37ea07edfab91ec"
+  integrity sha512-Wvss5ivl8TMRZXXESstBA4uR5iXgEN/VC5/sOcuXdVLzcdkz4HWetIoRfG5gb5X+ij/G9rw9YoGn3QoQ8OCSpw==
   dependencies:
     lru-cache "^6.0.0"
 
@@ -7813,9 +7811,9 @@ tapable@^2.1.1, tapable@^2.2.0:
   integrity sha1-XDc9KB2cZyhIIT0OA30cQWWrQms=
 
 tar@^6.1.11:
-  version "6.1.14"
-  resolved "https://registry.yarnpkg.com/tar/-/tar-6.1.14.tgz#e87926bec1cfe7c9e783a77a79f3e81c1cfa3b66"
-  integrity sha512-piERznXu0U7/pW7cdSn7hjqySIVTYT6F76icmFk7ptU7dDYlXTm5r9A6K04R2vU3olYgoKeo1Cg3eeu5nhftAw==
+  version "6.1.15"
+  resolved "https://registry.yarnpkg.com/tar/-/tar-6.1.15.tgz#c9738b0b98845a3b344d334b8fa3041aaba53a69"
+  integrity sha512-/zKt9UyngnxIT/EAGYuxaMYgOIJiP81ab9ZfkILq4oNLPFX50qyYmu7jRj9qeXoxmJHjGlbH0+cm2uy1WCs10A==
   dependencies:
     chownr "^2.0.0"
     fs-minipass "^2.0.0"
@@ -8291,11 +8289,6 @@ wcwidth@^1.0.1:
   integrity sha1-8LDc+RW8X/FSivrbLA4XtTLaL+g=
   dependencies:
     defaults "^1.0.3"
-
-web-streams-polyfill@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.2.1.tgz#71c2718c52b45fd49dbeee88634b3a60ceab42a6"
-  integrity sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
