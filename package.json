@@ -60,7 +60,7 @@
     "vue": "3.3.4",
     "vue-hot-reload-api": "2.3.4",
     "vue-template-compiler": "2.7.14",
-    "webpack": "5.85.0",
+    "webpack": "5.85.1",
     "worker-loader": "3.0.8"
   },
   "peerDependencies": {
