@@ -59,7 +59,7 @@
     "prettier": "3.0.3",
     "vue": "3.3.6",
     "vue-hot-reload-api": "2.3.4",
-    "vue-template-compiler": "2.7.14",
+    "vue-template-compiler": "2.7.15",
     "webpack": "5.89.0",
     "worker-loader": "3.0.8"
   },
