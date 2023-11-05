@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "make-cancellable-promise": "^1.1.0",
-    "pdfjs-dist": "^3.0.0",
+    "pdfjs-dist": "^4.0.0",
     "vue-class-component": "^7.2.6",
     "vue-types": "^5.0.0"
   },
